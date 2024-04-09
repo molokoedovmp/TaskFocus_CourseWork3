@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useUser } from "@clerk/clerk-react";
 import { useMutation } from "convex/react";
 import { toast } from "sonner";
-import { MoreHorizontal, Trash } from "lucide-react";
+import { MoreHorizontal, Trash, Table } from "lucide-react";
 
 import { Id } from "@/convex/_generated/dataModel";
 import {
@@ -42,6 +42,10 @@ export const Menu = ({
     router.push("/documents");
   };
 
+  const onInsertKanban = () => {
+    
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -63,6 +67,10 @@ export const Menu = ({
         <div className="text-xs text-muted-foreground p-2">
           Удалил: {user?.fullName}
         </div>
+        <DropdownMenuItem onClick={onInsertKanban}>
+          <Table className="h-4 w-4 mr-2" />
+          Вставить Канбан
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

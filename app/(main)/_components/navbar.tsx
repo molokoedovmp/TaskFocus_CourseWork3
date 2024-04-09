@@ -11,7 +11,6 @@ import { Title } from "./title";
 import { Banner } from "./banner";
 import { Menu } from "./menu";
 import { Publish } from "./publish";
-// import html2pdf from 'html2pdf.js';
 import KanbanBoard from "./kanbanBoard";
 
 import {
@@ -100,6 +99,7 @@ export const Navbar = ({
                   <MenubarSubContent>
                     <MenubarItem>В формате html</MenubarItem>
                     <MenubarItem>В формате pdf</MenubarItem>
+                    <MenubarItem>В формате README</MenubarItem>
                   </MenubarSubContent>
                 </MenubarSub>
               </MenubarContent>
